@@ -1,0 +1,26 @@
+{
+	"name": "NodejsStarterApp",
+	"version": "0.0.1",
+	"private": true,
+	"scripts": {
+		"start": "node app.js"
+	},
+	"dependencies": {
+		"body-parser": "1.17.x",
+		"cfenv": "1.0.x",
+		"composer-cli": "0.19.8",
+		"composer-client": "0.19.8",
+		"composer-common": "^0.19.8",
+		"config": "^1.24.0",
+		"express": "4.15.x",
+		"grpc": "1.10.1",
+		"node-datetime": "^2.0.6",
+		"request": "2.81.x",
+		"sync-request": "4.x",
+		"xml2js": "0.4.x"
+	},
+	"repository": {},
+	"engines": {
+		"node": "10.1.0"
+	}
+}

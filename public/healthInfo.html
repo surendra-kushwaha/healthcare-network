@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+
+  <title>Tampa Innovation</title>
+  <link rel="stylesheet" type="text/css" href="css/1611-ZOGSJS.css">
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <link href="css/font-awesome.css" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="css/main.css" rel="stylesheet">
+
+</head>
+
+<body ng-app="myApp" ng-controller="authorityController">
+
+  <header class="blog-header">
+    <div class="container">
+      <div class="row flex-nowrap justify-content-between align-items-center">
+        <div class="col-8 pt-1">
+          <span class="graphicRegular">Tampa Innovation |</span>
+          <span class="graphicRegular">Blockchain Healthcare App</span>
+        </div>
+
+        <div class="col-4 d-flex justify-content-end align-items-center">
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <a class="btn btn-sm btn-customize" ng-href="/index.html">Log out</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+  <div class="subheader">
+    <div class="container">Health Information</div>
+  </div>
+  <div class="container data">
+    <div class="search_form" id="error" style="display:none;">
+   
+    </div>
+    <div class="result" ng-show="prescriptions.length > 0">     
+      <div class="table-responsive" colspan="12">
+        <div colspan="4" ng-if="healthData==1" style="float:left; width:400px;padding-left:100px;">
+          <table class="table table-striped">
+            <thead>
+              <th scope="col" style="color:blueviolet;font-size: 16px;">Community Care&nbsp;&nbsp;
+              </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Do you know these steps can help reduce risk of diabetes</td>
+              </tr>
+              <tr>
+                  <td>1- Running</td>
+                </tr>
+                <tr>
+                    <td>2- Healthy Food Habit</td>
+                </tr>
+                <tr>
+                    <td>3- Preventive Care</td>
+                </tr>               
+            </tbody>
+          </table>
+        </div>
+        <div colspan="4" ng-if="healthData==2" style="float:left; width:400px;padding-left:100px;">
+            <table class="table table-striped">
+              <thead>
+                <th scope="col" style="color:blueviolet;font-size: 16px;">Community Care&nbsp;&nbsp;
+                </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Do you know these steps can help reduce risk of blood pressure</td>
+                </tr>
+                <tr>
+                    <td>1- Stress free daily routine</td>
+                  </tr>
+                  <tr>
+                      <td>2- Excercise</td>
+                  </tr>
+                  <tr>
+                      <td>3- Preventive Care</td>
+                  </tr>               
+              </tbody>
+            </table>
+          </div>
+        <div colspan="4"  ng-show="prescriptions.length > 0" style="float:right; width:400px;padding-right:100px;">
+          <table class="table table-striped">
+            <thead>
+              <th scope="col" style="color:blueviolet;font-size: 16px;">Your Health Information&nbsp;&nbsp;
+              </th>
+              </tr>
+            </thead>
+            <tbody  ng-repeat="prescription in prescriptions | limitTo: rowLimit">
+                <tr>
+                  <td>Customer: {{customerName}}</td>
+                </tr>
+                <tr>
+                    <td>Health Info Id: {{prescription.prescriptionId}}</td>
+                  </tr>
+                  <!--<tr>
+                      <td>Employer: {{prescription.providerName}}</td>
+                  </tr>-->
+                  <tr>
+                      <td>Insurer: {{prescription.pharmacyName}}</td>
+                  </tr>
+                  <tr>
+                      <td style="color:slateblue"><b>Daily Signal</b></td>
+                  </tr>
+                  <tr>
+                      <td>Avg Heart Rate: {{prescription.dailySignal.avgHeartRate}}</td>
+                  </tr>
+                  <!--<tr>
+                      <td>Sleep Duration: {{prescription.dailySignal.sleepDuration}}</td>
+                  </tr>-->
+                  <tr>
+                      <td>Steps Covered: {{prescription.dailySignal.stepsCovered}}</td>
+                  </tr>
+                  <tr>
+                      <td>Calories Burnt: {{prescription.dailySignal.caloriesBurnt}}</td>
+                  </tr>
+                  <tr>
+                      <td>Calories Taken: {{prescription.dailySignal.caloriesTaken}}</td>
+                  </tr>
+                  <tr>
+                      <td style="color:slateblue"><b>Geo Coding Info</b></td>
+                  </tr>
+                  <tr>
+                      <td>Geo Location: {{prescription.geoCodingInfo.geoLocation}}</td>
+                  </tr>
+                  <tr>
+                      <td>Epidemics: {{prescription.geoCodingInfo.epidemics}}</td>
+                  </tr>
+                  <tr>
+                      <td>Hot Spots: {{prescription.geoCodingInfo.hotSpots}}</td>
+                  </tr>
+                  <tr>
+                      <td style="color:slateblue"><b>Life Style Info</b></td>
+                  </tr>
+                  <tr>
+                      <td>Smoking: {{prescription.lifeStyleInfo.smoking}}</td>
+                  </tr>
+                  <tr>
+                      <td>Alcohol: {{prescription.lifeStyleInfo.alcohol}}</td>
+                  </tr>
+                  <tr>
+                      <td>Carbonated Drinks: {{prescription.lifeStyleInfo.carbonatedDrinks}}</td>
+                  </tr>
+                  <tr>
+                      <td style="color:slateblue"><b>Heart Rate During Medicine</b></td>
+                  </tr>
+                  <tr>
+                      <td>Avg Before Consumption: {{prescription.heartRateDuringMedicine.avgBeforeConsumption}}</td>
+                  </tr>
+                  <tr>
+                      <td>Avg After Consumption: {{prescription.heartRateDuringMedicine.avgAfterConsumption}}</td>
+                  </tr>
+                  <tr>
+                      <td style="color:slateblue"><b>Social Determinants</b></td>
+                  </tr>
+                  <tr>
+                      <td>Daily Commute: {{prescription.socialDeterminants.dailyCommute}}</td>
+                  </tr>
+                  <tr>
+                      <td>Family Conflict: {{prescription.socialDeterminants.familyConflict}}</td>
+                  </tr>
+                  <tr>
+                      <td>Work Shift: {{prescription.socialDeterminants.workshift}}</td>
+                  </tr>
+                  <tr>
+                      <td style="color:slateblue"><b>High Risk Info</b></td>
+                  </tr>
+                  <tr>
+                      <td>Risk: {{prescription.highRiskInfo.risk}}</td>
+                  </tr>
+                  <tr>
+                      <td>BloodPressure: {{prescription.highRiskInfo.bloodPressure}}</td>
+                  </tr>
+                  <tr>
+                      <td>LifeStyle Diseases: {{prescription.highRiskInfo.lifeStyleDiseases}}</td>
+                  </tr>
+              </tbody>
+          </table>
+        </div>
+
+        <div colspan="4" ng-if="healthData==1" style="float:left; width:400px;padding-left:100px;">
+            <table class="table table-striped">
+              <thead>
+                <th scope="col" style="color:blueviolet;font-size: 16px;">Near By Facilities&nbsp;&nbsp;
+                </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Community preventive care for diabetes: XYZ (3.5 miles)</td>
+                </tr>
+                <tr>
+                    <td>Restaurant serving food for diabetic: ABC (2.3 miles)</td>
+                  </tr>
+                  <tr>
+                      <td>Meetup on diabetics info August 7, 2018</td>
+                  </tr>                                 
+              </tbody>
+            </table>
+          </div>
+
+          <div colspan="4" ng-if="healthData==2" style="float:left; width:400px;padding-left:100px;">
+              <table class="table table-striped">
+                <thead>
+                  <th scope="col" style="color:blueviolet;font-size: 16px;">Near By Facilities&nbsp;&nbsp;
+                  </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Community preventive care for blood pressure: ABC (2.5 miles)</td>
+                  </tr>
+                  <tr>
+                      <td>Restaurant serving food for blood pressure: XYZ (1.3 miles)</td>
+                    </tr>
+                    <tr>
+                        <td>Meetup on blood pressure info August 2, 2018</td>
+                    </tr>                                 
+                </tbody>
+              </table>
+            </div>
+
+      </div>
+      
+    </div>
+  </div>
+  <!-- <div class="viewmore">
+    <button type="submit" class="btn btn-primary">View more</button>
+  </div> -->
+  <div class="copyright">
+    Copyright 2001-2018 Accenture. All rights reserved. Accenture Confidential. For internal use only.
+    <a href="#">Terms of Use | Privacy Statement</a>
+  </div>
+  <div class="modal fade" id="exampleModalCenterError" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      
+        <div class="modal-body">
+         <img src="img/loading.gif"/>
+    
+    </div>
+</body>
+
+
+
+<script src="js/jquery.js"></script>
+<script>
+
+ var patientLength=0;
+   var idLength=0;
+   var doctorLength=0;
+   var pharmacyLength=0;
+         
+   $("#patientField").keyup(function(event){
+      patientLength=$('#patientField').val().length;
+      if( patientLength  == 0)
+    {  $('#idField').prop('disabled', false);
+         $('#doctorField').prop('disabled', false);
+         $('#pharmacyField').prop('disabled', false);
+         document.getElementById('submitButton').disabled = true;
+    }
+      else
+      {$('#idField').prop('disabled', true);
+         $('#doctorField').prop('disabled', true);
+         $('#pharmacyField').prop('disabled', true);
+         document.getElementById('submitButton').disabled = false;}
+      
+
+    });
+
+
+      
+      $('#idField').keyup(function(event){
+        idLength=$('#idField').val().length;
+        
+      if( idLength  == 0)
+    {  $('#patientField').prop('disabled', false);
+         $('#doctorField').prop('disabled', false);
+         $('#pharmacyField').prop('disabled', false);
+         document.getElementById('submitButton').disabled = true;
+    }
+      else
+      {$('#patientField').prop('disabled', true);
+         $('#doctorField').prop('disabled', true);
+         $('#pharmacyField').prop('disabled', true);
+         document.getElementById('submitButton').disabled = false;}
+      });
+
+
+      $('#doctorField').keyup(function(event){
+        doctorLength=$('#doctorField').val().length;
+        if( doctorLength  == 0)
+    {  $('#patientField').prop('disabled', false);
+         $('#idField').prop('disabled', false);
+         $('#pharmacyField').prop('disabled', false);
+         document.getElementById('submitButton').disabled = true;
+    }
+      else
+      {$('#patientField').prop('disabled', true);
+         $('#idField').prop('disabled', true);
+         $('#pharmacyField').prop('disabled', true);
+         document.getElementById('submitButton').disabled = false;}
+      });
+
+      $('#pharmacyField').keyup(function(event){
+        pharmacyLength=$('#pharmacyField').val().length;
+        if( pharmacyLength  == 0)
+    {  $('#patientField').prop('disabled', false);
+         $('#idField').prop('disabled', false);
+         $('#doctorField').prop('disabled', false);
+         document.getElementById('submitButton').disabled = true;
+    }
+      else
+      {$('#patientField').prop('disabled', true);
+         $('#idField').prop('disabled', true);
+         $('#doctorField').prop('disabled', true);
+         document.getElementById('submitButton').disabled = false;}
+      });
+      
+   
+  
+
+         </script>
+<script src="js/bootstrap.js"></script>
+<script src="js/angular.min.js"></script>
+<script src="js/app.js"></script>
+<script src="js/authorityController.js"></script>
+
+</html>

@@ -1,0 +1,62 @@
+//
+// Customer Rules
+// -----------------------------------------------------------------------------
+
+// ***Customer can view and update their participant details
+rule CustomerCanReadUpdateThemselves{
+    description: "Allow customer to view and update their record"
+    participant(p): "com.tampa.healthcare.Customer"
+    operation: CREATE, UPDATE, READ
+    resource(r): "com.tampa.healthcare.Customer"
+    condition: (r.getIdentifier()== p.getIdentifier())
+    action: ALLOW
+}
+
+// ***Patient can only view the prescriptions associated with them
+rule CustomersCanReadOwnPrescriptions {
+    description: "Allow customer to only read healthInfo that are associated to them"
+    participant(p): "com.tampa.healthcare.Customer"
+    operation: READ
+    resource(prescription): "com.tampa.healthcare.HealthInfo"
+    condition: (prescription.customer.getIdentifier() == p.getIdentifier())
+    action: ALLOW
+}
+
+// ***Patient can read only their historian records
+rule CustomerCanReadTheirHistorianAccess {
+    description: "Allow the customer to access the HistorianRecord resource"
+    participant(m): "com.tampa.healthcare.Customer"
+    operation: READ
+    resource(h): "org.hyperledger.composer.system.HistorianRecord"
+    condition: (h.participantInvoking.getIdentifier() != m.getIdentifier())
+    action: DENY
+
+}
+
+
+// System Admin Rules
+//-----------------------------------------------------------------------------------
+
+rule SystemACL {
+  description:  "System ACL to permit all access"
+  participant: "org.hyperledger.composer.system.Participant"
+  operation: ALL
+  resource: "org.hyperledger.composer.system.**"
+  action: ALLOW
+}
+
+rule NetworkAdminUser {
+    description: "Grant business network administrators full access to user resources"
+    participant: "org.hyperledger.composer.system.NetworkAdmin"
+    operation: ALL
+    resource: "**"
+    action: ALLOW
+}
+
+rule NetworkAdminSystem {
+    description: "Grant business network administrators full access to system resources"
+    participant: "org.hyperledger.composer.system.NetworkAdmin"
+    operation: ALL
+    resource: "org.hyperledger.composer.system.**"
+    action: ALLOW
+}

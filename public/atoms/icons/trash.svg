@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="12px" height="15px" viewBox="0 0 12 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>atoms / icons /trash</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Pharmacy-Interaction" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-1177.000000, -406.000000)">
+        <g id="atoms-/-icons-/trash" transform="translate(1177.000000, 405.000000)" fill="#737A93">
+            <path d="M0.801,14.403 C0.801,15.282 1.52,16 2.398,16 L8.801,16 C9.68,16 10.398,15.282 10.398,14.403 L10.398,4.801 L0.801,4.801 L0.801,14.403 Z M11.199,2.403 L8.398,2.403 L7.602,1.602 L3.602,1.602 L2.801,2.403 L0,2.403 L0,4 L11.199,4 L11.199,2.403 Z" id="rubbish-bin-delete-button"></path>
+        </g>
+    </g>
+</svg>

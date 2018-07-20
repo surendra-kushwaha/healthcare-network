@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="21px" viewBox="0 0 20 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>atoms / icons /calendar</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Authority-Interaction---Home" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-715.000000, -330.000000)">
+        <g id="atoms-/-icons-/calendar" transform="translate(715.000000, 330.000000)" fill="#737A93">
+            <g id="calendar">
+                <path d="M17.0436317,1.73852459 L17.0436317,3.43367213 L16.8084399,3.43367213 L16.8084399,0.0433278689 L14.6926854,0.0433278689 L14.6926854,1.73852459 L5.28930946,1.73852459 L5.28930946,3.43367213 L5.05432225,3.43367213 L5.05432225,0.0433278689 L2.93856777,0.0433278689 L2.93856777,1.73852459 L0,1.73852459 L0,20.950918 L19.9819949,20.950918 L19.9819949,1.73852459 L17.0436317,1.73852459 Z M2.05703325,18.8006066 L17.9252174,18.8006066 L17.9252174,6.82406557 L2.05703325,6.82406557 L2.05703325,18.8006066 Z" id="Fill-1"></path>
+                <polygon id="Fill-2" points="4.1140665 10.7795902 7.05242967 10.7795902 7.05242967 7.95422951 4.1140665 7.95422951"></polygon>
+                <polygon id="Fill-3" points="8.52184143 10.7795902 11.4604092 10.7795902 11.4604092 7.95422951 8.52184143 7.95422951"></polygon>
+                <polygon id="Fill-4" points="12.9295652 10.7795902 15.868133 10.7795902 15.868133 7.95422951 12.9295652 7.95422951"></polygon>
+                <polygon id="Fill-5" points="4.1140665 14.7351639 7.05242967 14.7351639 7.05242967 11.9098033 4.1140665 11.9098033"></polygon>
+                <polygon id="Fill-6" points="8.52184143 14.7351639 11.4604092 14.7351639 11.4604092 11.9098033 8.52184143 11.9098033"></polygon>
+                <polygon id="Fill-7" points="12.9295652 14.7351639 15.868133 14.7351639 15.868133 11.9098033 12.9295652 11.9098033"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

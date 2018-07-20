@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+
+  <title>Index</title>
+  <link rel="stylesheet" type="text/css" href="css/1611-ZOGSJS.css">
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <link href="css/font-awesome.css" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="css/main.css" rel="stylesheet">
+</head>
+
+<body ng-app="myApp" ng-controller="loginController">
+  <div class="main">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="poster col-sm-6">
+          <div class="tag">           
+            <h3 class="tagline" style="font-family:Rubik-Light;" >Tampa Innovation.</h3>
+            <h2 class="tagline" style="font-family:Rubik-Light;" >Blockchain Healthcare App</h2>
+            
+          </div>
+        </div>
+</body>
+<div class="login col-sm-6">
+  <h1>Welcome</h1>
+  <div class="alert" id="error">
+   
+  </div>
+  <form>
+    <div class="form-group">
+      <label for="exampleInputEmail1">User Name</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" 
+        ng-model="email" style="font-family:Graphik-Medium;"/>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Password</label>
+      <input type="password" class="form-control" id="exampleInputPassword1"  ng-model="password" style="font-family:Graphik-Medium;"
+      />
+    </div>
+    <div class="custom-control custom-checkbox ">
+      <input type="checkbox" class="custom-control-input" id="customCheck1">
+      <label class="custom-control-label graphicRegular" for="customCheck1">Remember me</label>
+    </div>
+
+    <button type="submit" class="btn btn-primary" ng-click="validateUser(email,password)">Log in</button>
+  </form>
+
+
+</div>
+</div>
+<div class="copyright">
+  Copyright 2001-2018 Accenture. All rights reserved. Accenture Confidential. For internal use only.
+  <a href="#">Terms of Use | Privacy Statement</a>
+</div>
+
+</div>
+</div>
+
+</body>
+<script src="js/jquery.js"></script>
+<script>
+ $(document).ready(function() { sessionStorage.clear(); });
+  </script>
+<script src="js/bootstrap.js"></script>
+<script src="js/angular.min.js"></script>
+<script src="js/app.js"></script>
+<script src="js/LoginController.js"></script>
+
+</html>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="11px" height="16px" viewBox="0 0 11 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>atoms / icons / location</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Pharmacy-Interaction---Home" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-864.000000, -94.000000)">
+        <g id="Group-7" transform="translate(166.000000, 76.000000)" fill="#457CF3">
+            <g id="atoms-/-icons-/-location" transform="translate(698.000000, 18.000000)">
+                <path d="M5.49998467,8.26813187 C3.92297862,8.26813187 2.64,6.9992352 2.64,5.43954528 C2.64,3.87988568 3.92300928,2.61098901 5.49998467,2.61098901 C7.07699072,2.61098901 8.36,3.87988568 8.36,5.43954528 C8.36,6.9992352 7.07699072,8.26813187 5.49998467,8.26813187 Z M5.49998517,0 C2.46729027,0 0,2.47446575 0,5.51598045 C0,9.29059527 4.92197448,14.8319504 5.1315319,15.0660046 C5.32836461,15.2858692 5.67199133,15.2855122 5.8684681,15.0660046 C6.07802552,14.8319504 11,9.29059527 11,5.51598045 C10.9999703,2.47446575 8.53268006,0 5.49998517,0 Z" id="maps-and-flags"></path>
+            </g>
+        </g>
+    </g>
+</svg>

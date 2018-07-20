@@ -1,0 +1,106 @@
+/**
+ * Business network created for healthCare
+ */
+
+namespace com.tampa.healthcare
+
+participant Customer identified by customerId {
+  o String customerId
+  o String firstName
+  o String lastName
+}
+
+participant Insurer identified by insurerId {
+  o String insurerId
+  o String firstName
+  o String lastName
+}
+
+participant Employer identified by employerId {
+  o String employerId
+  o String employerName
+  o String location
+}
+
+participant MedicalAuthority identified by authorityId {
+  o String authorityId
+  o String authorityName
+}
+
+concept DailySignal {
+    o String avgHeartRate
+    o String sleepDuration
+    o String stepsCovered
+    o String caloriesBurnt
+    o String caloriesTaken
+}
+
+concept GeoCodingInfo {
+    o String geoLocation
+    o String epidemics
+    o String hotSpots
+}
+
+concept LifeStyleInfo {
+    o String smoking
+    o String alcohol
+    o String carbonatedDrinks
+}
+
+concept HeartRateDuringMedicine {
+    o String avgBeforeConsumption
+    o String avgAfterConsumption
+}
+
+concept SocialDeterminants {
+    o DailyCommute dailyCommute
+    o String familyConflict
+    o WorkShift workshift
+}
+
+concept HighRiskInfo {
+    o Risk risk
+    o String bloodPressure
+    o String lifeStyleDiseases
+}
+
+concept NearByFacilities {
+    o String communityCare
+    o String restaurant
+    o String informationalMeetup
+    o String fitnessCenter
+}
+
+asset HealthInfo identified by healthInfoId {
+  o String healthInfoId
+  o DailySignal dailySignal
+  o GeoCodingInfo geoCodingInfo
+  o LifeStyleInfo lifeStyleInfo
+  o HeartRateDuringMedicine heartRateDuringMedicine
+  o SocialDeterminants socialDeterminants
+  o HighRiskInfo highRiskInfo
+  o NearByFacilities nearByFacilities
+  o DateTime dateCreated
+  --> Customer customer
+  --> Employer employer
+  --> Insurer insurer
+}
+
+
+enum Risk {
+    o low
+    o medium
+    o high
+}
+
+enum DailyCommute {
+    o short
+    o medium
+    o long
+}
+
+enum WorkShift {
+    o morning
+    o day
+    o night
+}
