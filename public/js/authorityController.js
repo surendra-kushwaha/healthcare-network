@@ -22,11 +22,11 @@ angular
         $scope.prescriptions=[];
         var healthInfoId='HI1001';
         $scope.healthData="";
-        if(sessionStorage.getItem('userId')=='prakash@accenture.com'){
+        if(sessionStorage.getItem('userId')=='prakash@tampachallenge'){
           healthInfoId='HI1002';
           $scope.healthData="1";
           $scope.customerName="Prakash Trivedi";
-        }else if(sessionStorage.getItem('userId')=='surendra@accenture.com'){
+        }else if(sessionStorage.getItem('userId')=='surendra@tampachallenge'){
           healthInfoId='HI1001';
           $scope.healthData="2";
           $scope.customerName="Surendra Kushwaha";
