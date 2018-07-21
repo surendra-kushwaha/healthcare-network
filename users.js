@@ -12,13 +12,13 @@ const authority = [
 const customer = [
   {
     ownerId: 'A1001',
-    username: 'prakash@accenture.com',
+    username: 'prakash@tampachallenge',
     type: 'customer',
     role: 'customer1',
   },
   {
     ownerId: 'A1001',
-    username: 'surendra@accenture.com',
+    username: 'surendra@tampachallenge',
     type: 'customer',
     role: 'customer2',
   },
